@@ -1,0 +1,35 @@
+body{
+    margin: 0px;
+}
+
+
+header{
+    background-color: #FF8B00;
+    height: 80px;
+}
+
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.header_inner img{
+    width: 120px;
+    height: auto;
+}
+
+.hamburger_menu_symbol{
+    width: 34px;
+    color: white;
+}
+
+.hamburger_menu_symbol:hover{
+    cursor: pointer;
+    box-shadow: 0 0 0 15px rgba(52, 152, 219, 0.15);
+    background: rgba(52, 152, 219, 0.15);
+    border-radius: 50%;
+}
