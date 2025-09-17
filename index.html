@@ -10,9 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <script src="./db.js"></script>
 </head>
 
-<body>
+<body onload="init()">
     <header>
         <div class="header_inner">
             <img src="./icons/Bestell App- Logo.svg" alt="Logo">
@@ -28,7 +29,7 @@
                 alt="Cheesy pizza slice being pulled apart">
             <div class="restaurant_container">
                 <img class="icon_restaurant" src="./img/la_bella_vita/icon_la_bella_vita.png" alt="icon">
-                <h1>Name des Restaurant</h1>
+                <h1>La bella vita</h1>
                 <span class="rating">Bewertung (4,2 von 5 Sternen)</span>
                 <div class="menu_navigation">
                     <svg class="arrow_symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" xml:space="preserve"
@@ -44,22 +45,23 @@
                 </div>
                 <img class="restaurant_image_2" src="./img/la_bella_vita/image_la_bella_vita_2.jpg" alt="">
                 <h2 class="section_label">Hauptgerichte</h2>
-                <div class="dish_container">
-                    <h4>Pizza</h4>
-                    <span class="description_of_dish">mit Krabben und Zwiebel</span>
-                    <span class="price">9,5€</span>
-                    <svg class="plus_symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-                        <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 
-                        0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
-                      </svg>
-                      
+                <div id="dishes_container">
+            
             </div>
-            </div>
+            <img class="restaurant_image_2" src="./img/la_bella_vita/image_la_bella_vita_3.jpg" alt="">
+            <h2 class="section_label">Desserts</h2>
+            <div id="desserts_container">
+        
         </div>
+        </div>
+        </div>
+        <div class="basket_wrapper">
         <div id="basket" class="basket">
             <div class="basket_header">
                 <span>Warenkorb</span>
             </div>
+            <span>sdfdsfds</span>
+        </div>
         </div>
     </main>
     <footer></footer>

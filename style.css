@@ -9,6 +9,7 @@ h1{
 
 main{
     display: flex;
+    flex-direction: row;
 }
 
 header{
@@ -42,11 +43,18 @@ header{
     border-radius: 50%;
 }
 
-.basket{
-    width: 300px;
-    height: calc(100vh - 80px);
+.basket_wrapper{
+    flex-grow: 1;
+    max-width: 300px;
     box-shadow: -2px 0px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    background-color: white;
+}
+
+.basket{
+    width: 100%;
+    position:sticky;
+    height: 400px;
+    top: 0;
 }
 
 .basket_header{
@@ -149,6 +157,8 @@ header{
     border: 1px solid, rgb(200, 200, 200, 0.5); 
     height: 94px;
     padding: 16px;
+    max-width: 100%;
+    margin-bottom: 16px;
 }
 
 .dish_container:hover{
@@ -160,12 +170,13 @@ header{
     margin-top: 0px;
     margin-bottom: 20px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .description_of_dish{
     margin-bottom: 16px;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .price{
