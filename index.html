@@ -16,13 +16,46 @@
     <header>
         <div class="header_inner">
             <img src="./icons/Bestell App- Logo.svg" alt="Logo">
-            <svg xmlns="http://www.w3.org/2000/svg" onclick="basketToggle()" class="hamburger_menu_symbol" fill="none" viewBox="0 0 24 24"
-                stroke-width="1.5" stroke="currentColor" class="size-6">
+            <svg xmlns="http://www.w3.org/2000/svg" onclick="basketToggle()" class="hamburger_menu_symbol" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
         </div>
     </header>
     <main>
+        <div class="main_inner">
+            <img class="restaurant_image" src="./img/la_bella_vita/image_la_bella_vita.jpg"
+                alt="Cheesy pizza slice being pulled apart">
+            <div class="restaurant_container">
+                <img class="icon_restaurant" src="./img/la_bella_vita/icon_la_bella_vita.png" alt="icon">
+                <h1>Name des Restaurant</h1>
+                <span class="rating">Bewertung (4,2 von 5 Sternen)</span>
+                <div class="menu_navigation">
+                    <svg class="arrow_symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" xml:space="preserve"
+                        fill="#FF8B00" transform="rotate(90)" stroke="#FF8B00">
+                            <path
+                                d="M29.9,28.6l-13-26c-0.3-0.7-1.4-0.7-1.8,0l-13,26c-0.2,0.4-0.1,0.8,0.2,1.1C2.5,30,3,30.1,3.4,29.9L16,25.1l12.6,4.9 c0.1,0,0.2,0.1,0.4,0.1c0.3,0,0.5-0.1,0.7-0.3C30,29.4,30.1,28.9,29.9,28.6z">
+                            </path>
+                    </svg>
+
+                    </svg>
+                    <span>Hauptgerichte</span>
+                    <span>Beilage</span>
+                </div>
+                <img class="restaurant_image_2" src="./img/la_bella_vita/image_la_bella_vita_2.jpg" alt="">
+                <h2 class="section_label">Hauptgerichte</h2>
+                <div class="dish_container">
+                    <h4>Pizza</h4>
+                    <span class="description_of_dish">mit Krabben und Zwiebel</span>
+                    <span class="price">9,5€</span>
+                    <svg class="plus_symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+                        <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 
+                        0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                      </svg>
+                      
+            </div>
+            </div>
+        </div>
         <div id="basket" class="basket">
             <div class="basket_header">
                 <span>Warenkorb</span>
@@ -33,4 +66,5 @@
 
 </body>
 <script src="./script.js"></script>
+
 </html>
