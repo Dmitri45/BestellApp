@@ -1,6 +1,10 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0px;
     font-family: "Roboto", sans-serif;
+
 }
 
 h1{
@@ -121,8 +125,15 @@ header{
     align-items: center;
 }
 
-.menu_navigation span{
+.menu_navigation a{
     margin-right: 16px;
+    text-decoration: none;
+    color: rgb(142, 143, 142);
+}
+
+.menu_navigation a:hover{
+    color: #FF8B00;
+    cursor: pointer;
 }
 
 .arrow_symbol{
