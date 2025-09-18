@@ -96,12 +96,18 @@ function checkObjectPresence(my_Object) {
 }
 
 function renderBasket() {
+    let totalPrice = 0;
     let basketMainRef = document.getElementById('basket_main');
     basketMainRef.innerHTML = '';
     for (let index = 0; index < basket.length; index++) {
         basketMainRef.innerHTML += getBasketHtml(basket[index]);
+        totalPrice += basket[index].number * basket[index].price ;
     }
-    getEmptyBasketHtml()
+    basketMainRef.innerHTML +=`<div class="basket_total">
+    <div class="basket_total_1"> <span>Zwischensume</span><span>${parseFloat(totalPrice).toFixed(2)}€</span></div>
+    <div class="basket_total_1"><span>Lieferkosten</span><span>4.50€</span></div>
+    <div class="basket_total_1 bold"><span>Gesamt</span><span>${parseFloat(totalPrice + 4.50).toFixed(2)}€</span></div></div>`;
+    getEmptyBasketHtml();
 }
 
 function getBasketHtml(my_Object) {
@@ -184,6 +190,7 @@ function removeFromBasket(event) {
 function getEmptyBasketHtml() {
     if (basket.length == 0) {
         let basketMainRef = document.getElementById('basket_main');
+        basketMainRef.innerHTML = '';
         basketMainRef.innerHTML += `  <div class="shopping_bag_container">
     <svg class="shopping_bag" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
         stroke-width="1.5" stroke="currentColor" class="size-6">
