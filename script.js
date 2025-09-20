@@ -96,17 +96,15 @@ function checkObjectPresence(my_Object) {
 }
 
 function renderBasket() {
-    let totalPrice = 0;
     let basketMainRef = document.getElementById('basket_main');
+    let totalPrice = 0;
     basketMainRef.innerHTML = '';
     for (let index = 0; index < basket.length; index++) {
         basketMainRef.innerHTML += getBasketHtml(basket[index]);
         totalPrice += basket[index].number * basket[index].price ;
     }
-    basketMainRef.innerHTML +=`<div class="basket_total">
-    <div class="basket_total_1"> <span>Zwischensume</span><span>${parseFloat(totalPrice).toFixed(2)}€</span></div>
-    <div class="basket_total_1"><span>Lieferkosten</span><span>4.50€</span></div>
-    <div class="basket_total_1 bold"><span>Gesamt</span><span>${parseFloat(totalPrice + 4.50).toFixed(2)}€</span></div></div>`;
+    basketMainRef.innerHTML +=`<div class="basket_total"><div class="basket_total_1"> <span>Zwischensume</span><span>${parseFloat(totalPrice).toFixed(2)}€</span></div>
+    <div class="basket_total_1"><span>Lieferkosten</span><span>4.50€</span></div><div class="basket_total_1 bold"><span>Gesamt</span><span>${parseFloat(totalPrice + 4.50).toFixed(2)}€</span></div></div>`;
     getEmptyBasketHtml();
 }
 
@@ -202,6 +200,23 @@ function getEmptyBasketHtml() {
 </div>`;
     }
 }
+
+function basketShow(){
+    document.getElementById('basket_wrapper').style.display ='block';
+    document.body.style.overflow = 'hidden';
+    document.getElementById('basket_button_container').classList.toggle('d_none_mobile');
+    document.getElementById('basket_button_container_2').classList.toggle('d_none');
+}
+
+function basketClose(){
+    document.getElementById('basket_wrapper').style.display  = 'none';
+    document.body.style.overflow = '';
+    document.getElementById('basket_button_container').classList.toggle('d_none_mobile');
+    document.getElementById('basket_button_container_2').classList.toggle('d_none');
+}
+
+
+
 
 
 

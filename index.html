@@ -55,8 +55,9 @@
                 </div>
             </div>
         </div>
-        <div class="basket_wrapper">
+        <div id="basket_wrapper" class="basket_wrapper">
             <div id="basket" class="basket">
+                <div id="basket_button_container_2" class="basket_button_container_2 d_none"><button onclick="basketClose()" class="button">Warenkorb</button></div>
                 <div class="basket_header">
                     <span>Warenkorb</span>
                 </div>
@@ -70,12 +71,12 @@
                         <span>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</span>
                     </div>
                 </div>
-    
+
             </div>
         </div>
     </main>
+    <div id="basket_button_container" class="basket_button_container"><button onclick="basketShow()" class="button">Warenkorb</button></div>
     <footer></footer>
-
 </body>
 <script src="./script.js"></script>
 
