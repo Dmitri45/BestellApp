@@ -25,6 +25,26 @@ let restaurant =
                 'name_of_dish': 'Saltimbocca alla Romana',
                 'ingredients': 'Kalbfleisch mit Schinken und Salbei in Weißweinsauce, serviert mit Gemüse oder Kartoffeln.',
                 'price': 18.50
+            },
+            {
+                'name_of_dish': 'Gnocchi al Pesto',
+                'ingredients': 'Hausgemachte Kartoffelgnocchi in frischem Basilikumpesto mit Parmesan.',
+                'price': 11.90
+            },
+            {
+                'name_of_dish': 'Osso Buco',
+                'ingredients': 'Geschmorte Kalbshaxe in Tomaten-Gemüsesauce, serviert mit Gremolata.',
+                'price': 19.80
+            },
+            {
+                'name_of_dish': 'Tagliatelle al Tartufo',
+                'ingredients': 'Frische Bandnudeln in Trüffelsauce mit Parmesan.',
+                'price': 16.50
+            },
+            {
+                'name_of_dish': 'Branzino al Forno',
+                'ingredients': 'Im Ofen gebackener Wolfsbarsch mit Kräutern, Olivenöl und Zitrone.',
+                'price': 21.00
             }
         ],
         'desserts': [
@@ -47,7 +67,11 @@ let restaurant =
                 'name_of_dessert': 'Tiramisu',
                 'ingredients': 'Dessert aus Löffelbiskuits, Kaffee, Mascarpone-Creme und Kakaopulver.',
                 'price': 6.50
+            },
+            {
+                'name_of_dessert': 'Zabaione',
+                'ingredients': 'Schaumige Weinschaumcreme aus Marsalawein, Zucker und Eigelb.',
+                'price': 6.20
             }
         ]
     };
-

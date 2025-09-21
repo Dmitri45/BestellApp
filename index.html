@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestellApp</title>
+    <link rel="icon" href="./icons/favicon-16x16.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,27 +56,31 @@
                 </div>
             </div>
         </div>
-        <div id="basket_wrapper" class="basket_wrapper">
+        <div id="basket_wrapper" class="basket_wrapper d_none_mobile">
             <div id="basket" class="basket">
-                <div id="basket_button_container_2" class="basket_button_container_2 d_none"><button onclick="basketClose()" class="button">Warenkorb</button></div>
+                <div id="basket_button_container_2" class="basket_button_container_2 d_none"><button
+                        onclick="basketClose()" class="button">Warenkorb schließen</button></div>
                 <div class="basket_header">
                     <span>Warenkorb</span>
                 </div>
-                <div id="basket_main" class="basket_main">
-                    <div class="shopping_bag_container">
-                        <svg class="shopping_bag" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                        </svg>
-                        <span>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</span>
+                <div class="basket_main_content">
+                    <div id="basket_main" class="basket_main">
+                        <div class="shopping_bag_container">
+                            <svg class="shopping_bag" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                            </svg>
+                            <span>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</span>
+                        </div>
                     </div>
+                    <div id="basket_total"></div>
                 </div>
-
             </div>
         </div>
     </main>
-    <div id="basket_button_container" class="basket_button_container"><button onclick="basketShow()" class="button">Warenkorb</button></div>
+    <div id="basket_button_container" class="basket_button_container"><button onclick="basketShow()"
+            class="button">Warenkorb</button></div>
     <footer></footer>
 </body>
 <script src="./script.js"></script>

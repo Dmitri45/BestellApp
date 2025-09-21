@@ -101,11 +101,18 @@ function renderBasket() {
     basketMainRef.innerHTML = '';
     for (let index = 0; index < basket.length; index++) {
         basketMainRef.innerHTML += getBasketHtml(basket[index]);
-        totalPrice += basket[index].number * basket[index].price ;
+        totalPrice += basket[index].number * basket[index].price;
     }
-    basketMainRef.innerHTML +=`<div class="basket_total"><div class="basket_total_1"> <span>Zwischensume</span><span>${parseFloat(totalPrice).toFixed(2)}€</span></div>
-    <div class="basket_total_1"><span>Lieferkosten</span><span>4.50€</span></div><div class="basket_total_1 bold"><span>Gesamt</span><span>${parseFloat(totalPrice + 4.50).toFixed(2)}€</span></div></div>`;
+    renderBasketTotal(totalPrice);
     getEmptyBasketHtml();
+}
+
+function renderBasketTotal(totalPrice) {
+    let basketRef = document.getElementById('basket_total');
+    basketRef.innerHTML = '';
+    basketRef.innerHTML += `<div class="basket_total"><div class="basket_total_1"> <span>Zwischensume</span><span>${parseFloat(totalPrice).toFixed(2)}€</span></div>
+    <div class="basket_total_1"><span>Lieferkosten</span><span>4.50€</span></div><div class="basket_total_1 bold"><span>Gesamt</span><span>${parseFloat(totalPrice + 4.50).toFixed(2)}€</span></div>
+    <button onclick="acceptOrder()" class="order_button">Bestellen</button></div>`;
 }
 
 function getBasketHtml(my_Object) {
@@ -188,6 +195,8 @@ function removeFromBasket(event) {
 function getEmptyBasketHtml() {
     if (basket.length == 0) {
         let basketMainRef = document.getElementById('basket_main');
+        let basketRef = document.getElementById('basket_total');
+        basketRef.innerHTML = '';
         basketMainRef.innerHTML = '';
         basketMainRef.innerHTML += `  <div class="shopping_bag_container">
     <svg class="shopping_bag" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -201,18 +210,27 @@ function getEmptyBasketHtml() {
     }
 }
 
-function basketShow(){
-    document.getElementById('basket_wrapper').style.display ='block';
+function basketShow() {
+    document.getElementById('basket_wrapper').classList.toggle('d_none_mobile');
     document.body.style.overflow = 'hidden';
     document.getElementById('basket_button_container').classList.toggle('d_none_mobile');
     document.getElementById('basket_button_container_2').classList.toggle('d_none');
 }
 
-function basketClose(){
-    document.getElementById('basket_wrapper').style.display  = 'none';
+function basketClose() {
+    document.getElementById('basket_wrapper').classList.toggle('d_none_mobile');
     document.body.style.overflow = '';
     document.getElementById('basket_button_container').classList.toggle('d_none_mobile');
     document.getElementById('basket_button_container_2').classList.toggle('d_none');
+}
+
+function acceptOrder(){
+    let basketMain = document.getElementById('basket_main');
+    let basketTotal = document.getElementById('basket_total')
+    basketMain.innerHTML = '';
+    basketTotal.innerHTML = '';
+    basket = [];
+    basketMain.innerHTML = `<span class="order-confirmation">Ihre Testbestellung wurde aufgenommen. Vielen Dank!</span>`;
 }
 
 
