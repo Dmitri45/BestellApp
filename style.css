@@ -19,6 +19,9 @@ h1 {
 main {
     display: flex;
     flex-direction: row;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header {
@@ -33,6 +36,9 @@ header {
     height: 100%;
     padding-left: 24px;
     padding-right: 24px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header_inner img {
@@ -657,7 +663,7 @@ footer{
 
     .basket_wrapper {
         margin-top: -40px;
-    }
+    
 
     .button{
         font-size: 14px;
@@ -679,4 +685,5 @@ footer{
         margin-top: 10px;
      }
 
+}
 }
